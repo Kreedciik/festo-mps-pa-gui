@@ -1,14 +1,15 @@
-import Navbar from '@widgets/layout/ui/navbar';
 import React, { FC } from 'react';
+import { NavbarMinimal } from './ui/navbar';
+import { Flex } from '@mantine/core';
 
 interface IProps {
   children: React.ReactNode;
 }
 export const Layout: FC<IProps> = ({ children }) => {
   return (
-    <div>
-      <Navbar />
+    <Flex>
+      <NavbarMinimal />
       <div>{children}</div>
-    </div>
+    </Flex>
   );
 };
